@@ -1,0 +1,54 @@
+.packCover{
+  height: auto;
+  width: 6rem;
+}
+.openedCard{
+  height: auto;
+  width: 10rem;
+  margin-left: 3rem;
+  opacity: 1 !important;
+}
+.packName{
+  margin-left: 3rem;
+}
+.packListing{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+.buyButton{
+  background-color: aqua;
+}
+.buyButton, .packName, .packCost{
+  margin-left: 3rem;
+}
+#openPackWrapper{
+  background-color: rgba(0, 0, 0, .4);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+  flex-wrap: wrap;
+}
+#openPackList{
+  width: auto;
+  height: auto;
+  margin-top: 20%;
+}
+body{
+  overflow: hidden;
+}
+#done{
+  background-color: grey;
+  display: inline-block;
+}
+#doneWrapper{
+  width: 100%;
+  margin-bottom: 20%;
+}
