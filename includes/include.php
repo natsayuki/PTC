@@ -7,4 +7,7 @@
   $db = "ptc";
 
   $conn = new mysqli($server, $username, $password, $db);
+  if($conn->connect_error){
+    echo '<script>console.log('.$conn->connect_error.')</script>';
+  }
 ?>
