@@ -1,5 +1,5 @@
 <?php
-  include($_SERVER['DOCUMENT_ROOT']."/PTC/includes/include.php");
+  include($_SERVER['DOCUMENT_ROOT']."/ptc/includes/include.php");
   if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] == false){
     echo '<script>window.location.href = "../"</script>';
   }
@@ -17,6 +17,7 @@
       <div id="openPackList"></div>
       <div id="doneWrapper"><center><h1 id="done">done</h1></center></div>
     </div>
+    <div id="openPackWrapperFake"></div>
     <div id="packList"></div>
   </body>
 </html>

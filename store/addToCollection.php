@@ -1,5 +1,5 @@
 <?php
-  include($_SERVER['DOCUMENT_ROOT']."/PTC/includes/include.php");
+  include($_SERVER['DOCUMENT_ROOT']."/ptc/includes/include.php");
   $card = $_POST['card'];
   $set = $_POST['set'];
   if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] == false){

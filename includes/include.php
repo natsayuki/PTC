@@ -1,5 +1,5 @@
 <?php
-  // include($_SERVER['DOCUMENT_ROOT']."PTC/includes/include.php");
+  // include($_SERVER['DOCUMENT_ROOT']."ptc/includes/include.php");
   session_start();
   $server = "localhost";
   $username = "root";

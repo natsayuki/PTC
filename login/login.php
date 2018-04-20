@@ -1,5 +1,5 @@
 <?php
-  include($_SERVER['DOCUMENT_ROOT']."/PTC/includes/include.php");
+  include($_SERVER['DOCUMENT_ROOT']."/ptc/includes/include.php");
   $tempUsername = mysqli_real_escape_string($conn, $_POST['username']);
   $tempPassword = mysqli_real_escape_string($conn, hash('ripemd160', $_POST['password']));
 

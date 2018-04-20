@@ -1,5 +1,5 @@
 <?php
-  include($_SERVER['DOCUMENT_ROOT']."/PTC/includes/include.php");
+  include($_SERVER['DOCUMENT_ROOT']."/ptc/includes/include.php");
 ?>
 <html>
   <head>
@@ -25,5 +25,6 @@
     </div>
     <h1 align="center">Patker Trading Cards</h1>
     <a href="store"><h1 align="center">Store</h1></a>
+    <a href="trade"><h1 align="center">Trade</h1></a>
   </body>
 </html>
