@@ -4,6 +4,7 @@ $(document).ready(function(){
   const PatkermonPack = {"Batker": {"rarity": 2}, "Catker": {"rarity": 2}, "Doormatker": {"rarity": 5}, "Hatker": {"rarity": 10}, "Ratker": {"rarity": 1},
   "Diplomatker": {'rarity': 5}, "Habitatker": {'rarity': 1}, "Proletariatker": {'rarity': 1}, "Satker": {'rarity': 2}, "Waistcoatker": {'rarity': 1},
   "Babysatker": {'rarity': 5}, "Cumquatker": {'rarity': 1}, "Thermostatker": {'rarity': 2}, "Aristocratker": {'rarity': 20}};
+  const PromoPatkerPack = {"Surprise Patker Promo": {"rarity": 1}}
 
   const buyButton = $('.buyButton');
   const packList = $('#packList');
@@ -12,6 +13,11 @@ $(document).ready(function(){
   const openPackWrapperFake = $('#openPackWrapperFake');
   const doneText = $('#done');
   const openedCardWrapper = $('.openedCardWrapper');
+  const redeem = $('#redeem');
+  const redeemForm = $('#redeemForm');
+  const redeemDiv = $('#redeemDiv');
+  const codeIn = $('#codeIn');
+  const redeemResults = $('#redeemResults');
 
   String.prototype.replaceAll = function(search, replacement) {
       var target = this;
@@ -131,5 +137,38 @@ $(document).ready(function(){
       openPackWrapperFake.css({'display': 'none'})
     }, 800);
     $('.openedCardWrapper').animate({'margin-left': '-10rem'});
+  });
+  redeem.click(function(){
+    redeemDiv.toggleClass('hide');
+  });
+  redeemForm.submit(function(e){
+    e.preventDefault();
+    let code = codeIn.val();
+    $.ajax('redeem.php', {
+      type: "POST",
+      data: {code: `${code}`},
+      success: function(data){
+        console.log(data);
+        redeemResults.hide();
+        if(data == 'invalid code'){
+          redeemResults.text(data);
+          redeemResults.show();
+        }
+        else if(data == 'already redeemed'){
+          redeemResults.text(data);
+          redeemResults.show();
+        }
+        else{
+          data = JSON.parse(data);
+          let tempPack = []
+          let packName;
+          $.each(data, function(index, value){
+            tempPack.push(index);
+            packName = value['set'];
+          });
+          openPack(packName, tempPack);
+        }
+      }
+    })
   });
 });

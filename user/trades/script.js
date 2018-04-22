@@ -20,9 +20,9 @@ $(document).ready(function(){
           <div class="incomingRequest" id="incomingDiv${index}" key="${key}">
             <div class="resultColor"></div>
             <h1 class="label">from: ${from}</h1>
-            <h1 class="label">they get: </h1>
-            <div class="giveDiv"></div>
             <h1 class="label">you get: </h1>
+            <div class="giveDiv"></div>
+            <h1 class="label">they get: </h1>
             <div class="takeDiv"></div>
             <h3 class="accept option">accept</h3>
             <h3 class="decline option">decline</h3>

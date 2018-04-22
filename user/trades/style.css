@@ -100,3 +100,6 @@
   left: 0px;
   display: none;
 }
+.count, .accept, .decline{
+  cursor: pointer;
+}

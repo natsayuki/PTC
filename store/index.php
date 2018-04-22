@@ -12,6 +12,17 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <div id="redeemDiv" class="hide">
+      <form id="redeemForm" type="POST" action="redeem.php">
+        <h1 align="center">code</h1>
+        <center>
+          <input type="text" id="codeIn" name="code" />
+          <button action="submit">submit</button>
+          <h3 id="redeemResults">invalid code</h3>
+        </center>
+      </form>
+    </div>
+    <h3 id="redeem">redeem code</h3>
     <a href="../user"><h3 align="right"><?php echo $_SESSION['username']; ?></h3></a>
     <div id="openPackWrapper">
       <div id="openPackList"></div>

@@ -79,3 +79,34 @@ body{
 .patker{
   box-shadow: 0 0 1rem 1rem rgba(255, 238, 0, .4);
 }
+#redeem{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background-color: aqua;
+  margin: 1rem;
+}
+#redeemDiv{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, .8);
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+}
+.hide{
+  display: none !important;
+}
+#redeemDiv > form > h1{
+  color: white;
+}
+.buyButton, #redeem, #done, .openedCard{
+  cursor: pointer;
+}
+#redeemResults{
+  color: red;
+  display: none;
+}
