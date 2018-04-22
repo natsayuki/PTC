@@ -23,7 +23,7 @@
   else if($results->num_rows > 0){
     echo 'username already taken';
   }else{
-    $sql = "INSERT INTO users (username, password, collection, cash) VALUES ('".$tempUsername."', '".$tempPassword."', '{}', '250')";
+    $sql = "INSERT INTO users (username, password, collection, cash, codes) VALUES ('".$tempUsername."', '".$tempPassword."', '{}', '250', '{}')";
     $results = $conn->query($sql);
     if($conn->error){
       echo $conn->error;
