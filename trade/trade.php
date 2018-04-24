@@ -29,5 +29,6 @@
     $results = $conn->query($sql);
     if($conn->error) echo $conn->error;
     else echo "success";
+    $_SESSION['return'] = 'tradeSuccess';
   }
 ?>

@@ -70,7 +70,7 @@ $(document).ready(function(){
         type: "POST",
         data: {type: "trade", to: `${to}`, give: `${give}`, take: `${take}`},
         success: function(data){
-          console.log(data);
+          if(data == 'success') window.location.href = '../';
         }
       });
     }

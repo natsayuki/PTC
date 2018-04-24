@@ -1,6 +1,7 @@
 <?php
   include($_SERVER['DOCUMENT_ROOT']."/ptc/includes/include.php");
   if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] == false){
+    $_SESSION['return'] = 'trade';
     echo '<script>window.location.href = "../"</script>';
   }
 ?>

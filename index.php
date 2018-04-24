@@ -1,13 +1,23 @@
 <?php
   include($_SERVER['DOCUMENT_ROOT']."/ptc/includes/include.php");
+
+  if(isset($_SESSION['return'])){
+    echo '<script>let sessionReturn = "'.$_SESSION['return'].'";</script>';
+    unset($_SESSION['return']);
+  }
 ?>
 <html>
   <head>
     <meta charset="utf-8" />
     <title>Patker Trading Cards</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="script.js"></script>
   </head>
   <body>
+    <div id="alert">
+      <h1 align="center" id="alertText"></h1>
+    </div>
     <div id="loginSignupWrapper">
       <?php
         if(!isset($_SESSION['loggedin']) || !$_SESSION['loggedin']){
