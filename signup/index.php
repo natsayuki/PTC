@@ -1,5 +1,6 @@
 <?php
   include($_SERVER['DOCUMENT_ROOT']."/ptc/includes/include.php");
+  echo '<script>window.location.href = "../"</script>';
 ?>
 <html>
   <head>
