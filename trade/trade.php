@@ -33,8 +33,8 @@
       $_SESSION['return'] = 'tradeSuccess';
     }
     else{
-      echo 'wrong';
       $_SESSION['return'] = 'tradeFail';
+      echo 'wrong';
     }
   }
 ?>
