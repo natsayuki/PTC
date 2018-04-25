@@ -7,7 +7,7 @@ $(document).ready(function(){
     if(sessionReturn == 'trade') showAlert('you need to be logged in to trade', false);
     else if(sessionReturn == 'store') showAlert("you need to logged in to access the store", false);
     else if(sessionReturn == 'tradeSuccess') showAlert("trade successful", true);
-    else if(sessionReturn == 'wrong') showAlert('cannot trade yourself', false);
+    else if(sessionReturn == 'tradeFail') showAlert('cannot trade yourself', false);
   }
 
   function showAlert(message, good){
