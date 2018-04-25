@@ -10,7 +10,7 @@
     <script src="script.js"></script>
   </head>
   <body>
-    <form action="signup.php" method="POST" id="form">
+    <form id="form">
       <center>
         <h3>username</h3>
         <input name="username" type="text" id="usernameIn" />
