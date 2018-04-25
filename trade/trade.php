@@ -25,10 +25,16 @@
     $give = mysqli_real_escape_string($conn, $_POST['give']);
     $take = mysqli_real_escape_string($conn, $_POST['take']);
     $tempUsername = mysqli_real_escape_string($conn, $_SESSION['username']);
-    $sql = 'INSERT INTO trades (touser, fromuser, give, take) VALUES ("'.$to.'", "'.$tempUsername.'", "'.$give.'", "'.$take.'")';
-    $results = $conn->query($sql);
-    if($conn->error) echo $conn->error;
-    else echo "success";
-    $_SESSION['return'] = 'tradeSuccess';
+    if($_POST['to'] != $_SESSION['username']){
+      $sql = 'INSERT INTO trades (touser, fromuser, give, take) VALUES ("'.$to.'", "'.$tempUsername.'", "'.$give.'", "'.$take.'")';
+      $results = $conn->query($sql);
+      if($conn->error) echo $conn->error;
+      else echo "success";
+      $_SESSION['return'] = 'tradeSuccess';
+    }
+    else{
+      echo 'wrong';
+      $_SESSION['return'] = 'tradeFail';
+    }
   }
 ?>

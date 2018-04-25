@@ -71,6 +71,7 @@ $(document).ready(function(){
         data: {type: "trade", to: `${to}`, give: `${give}`, take: `${take}`},
         success: function(data){
           if(data == 'success') window.location.href = '../';
+          if(data == 'wrong') window.location.href = '../';
         }
       });
     }
