@@ -1,4 +1,8 @@
 <?php
+  if ($_SERVER['SERVER_ADDR'] != $_SERVER['REMOTE_ADDR']){
+    $this->output->set_status_header(400, 'No Remote Access Allowed');
+    exit; //just for good measure
+  }
   include($_SERVER['DOCUMENT_ROOT']."/ptc/includes/include.php");
   $tempUsername = mysqli_real_escape_string($conn, $_POST['username']);
   $tempPassword = mysqli_real_escape_string($conn, hash('ripemd160', $_POST['password']));
