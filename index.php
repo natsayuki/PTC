@@ -22,9 +22,9 @@
       <?php
         if(!isset($_SESSION['loggedin']) || !$_SESSION['loggedin']){
           echo '
-              <a style="display: inline-block;" href="login"><h3>Log In</h3></a>
-              <a style="display: inline-block;" href="signup"><h3>Sign Up</h3></a>
-          ';
+              <a style="display: inline-block;" href="login"><h3>Log In</h3></a>'.
+              /*<a style="display: inline-block;" href="signup"><h3>Sign Up</h3></a>*/
+          '';
         }else{
           echo '
             <a style="display: inline-block;" href="user"><h3>'.$_SESSION['username'].'</h3></a>
