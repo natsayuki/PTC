@@ -5,6 +5,10 @@ $(document).ready(function(){
   "Diplomatker": {'rarity': 5}, "Habitatker": {'rarity': 1}, "Proletariatker": {'rarity': 1}, "Satker": {'rarity': 2}, "Waistcoatker": {'rarity': 1},
   "Babysatker": {'rarity': 5}, "Cumquatker": {'rarity': 1}, "Thermostatker": {'rarity': 2}, "Aristocratker": {'rarity': 20}};
   const PromoPatkerPack = {"Surprise Patker Promo": {"rarity": 1}}
+  const PatkerMoonPack = {"Cloaked Patker": {'rarity': 2}, 'Evil Patker Person': {'rarity': 1}, 'Evil Person Patker': {'rarity': 1}, 'Patker Gang': {'rarity': 2},
+  'Patker Jupiter': {'rarity': 5}, 'Patker Mars': {'rarity': 5}, 'Patker Mercury': {'rarity': 5}, 'Patker Moon( Blush)': {'rarity': 10}, 'Patker Moon( Dance)': {'rarity': 10},
+  'Patker Moon( Run)': {'rarity': 10}, 'Patker Moon': {'rarity': 20}, 'Patker Reflection': {'rarity': 1}, 'Patker Reveal': {'rarity': 1}, 'Patker Venus': {'rarity': 5},
+  'Team Patker': {'rarity': 1}};
 
   const buyButton = $('.buyButton');
   const packList = $('#packList');
@@ -86,7 +90,7 @@ $(document).ready(function(){
   }
 
   // Generate Pack Listings
-  let packsToGen = ['Classic Patker Pack', 'Patkermon Pack'];
+  let packsToGen = ['Classic Patker Pack', 'Patkermon Pack', 'PatkerMoonPack'];
 
   $.each(packsToGen, function(index, value){
     name = value;
@@ -124,7 +128,7 @@ $(document).ready(function(){
       else if(eval(`${pack}['${spaced}']['rarity']`) == 10) thisCard.addClass('legendary');
       else if(eval(`${pack}['${spaced}']['rarity']`) == 20) thisCard.addClass('patker');
       thisCard.animate({'width': width}, 200);
-    }, 200);
+    }, 201);
   });
   doneText.click(function(){
     setTimeout(function(){
